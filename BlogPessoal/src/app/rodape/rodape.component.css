@@ -1,0 +1,35 @@
+.p{  
+    color: hsl(182, 65%, 42%);  
+}
+
+ul.social-network{
+    list-style:none;
+    padding:0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa{
+    font-size: 25pt;
+    color:hsl(182, 65%, 42%);
+    padding: 10px;
+}
+
+.fa-instagram:hover{
+    color: #C13584;
+}
+.fa-linkedin:hover{
+    color:#0072b1;
+}
+.fa-github-alt:hover{
+    color: black;
+}
+.fa-graduation-cap:hover{
+    color:#0400ff;
+}
+
+

@@ -1,0 +1,13 @@
+#img-bg{
+    background-image: url('https://i.ibb.co/JcfGBZy/png.png');
+
+    min-height: 695px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.p{  
+    color: hsl(182, 65%, 42%);  
+}

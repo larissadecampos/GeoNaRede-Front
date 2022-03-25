@@ -1,0 +1,12 @@
+.fs-16
+{
+ font-size: 16pt;
+}
+
+.p{  
+    color: hsl(182, 65%, 42%);  
+}
+
+a{
+    cursor:pointer;
+}

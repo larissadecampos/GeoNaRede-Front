@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&family=Contrail+One&family=Mukta:wght@300&display=swap');
+
+*{
+    font-family: 'Azeret Mono', monospace;
+}
+
+
 #img-bg{
-    background-image: url('https://i.ibb.co/JcfGBZy/png.png');
+    background-image: url('https://i.ibb.co/xL1sm31/People.png');
 
     min-height: 695px;
 
@@ -10,4 +17,10 @@
 
 .p{  
     color: hsl(182, 65%, 42%);  
+}
+
+.quadrado{
+
+    background-color: rgba(210, 214, 212, 0.589);
+    border-radius: 5%;
 }

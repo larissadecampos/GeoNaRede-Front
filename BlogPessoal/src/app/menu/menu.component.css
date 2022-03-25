@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&family=Contrail+One&family=Habibi&family=Mukta:wght@300&display=swap');
+
 .fs-16
 {
  font-size: 16pt;
 }
 
 .p{  
-    color: hsl(182, 65%, 42%);  
+    color: hsl(182, 65%, 42%); 
+    font-family: 'Habibi', serif;
 }
 
 a{

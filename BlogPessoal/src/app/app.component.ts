@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root', //caminho do seletor
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'] // estilo CSS
 })
 export class AppComponent {
-  title = 'BlogPessoal';
+  constructor (
+    public auth: AuthService
+  ){}
 } 

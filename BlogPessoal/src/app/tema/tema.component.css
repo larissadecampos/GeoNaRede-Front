@@ -12,6 +12,9 @@
     font-size: 15pt;
     }
     
+.fs-12{
+    font-size:12px;
+}
 .p{  
     color:hsl(182, 90%, 24%);
    }

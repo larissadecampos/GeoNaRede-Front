@@ -17,13 +17,13 @@ export class AuthService {
 
   Entrar (userLogin: UserLogin): Observable<UserLogin>{
        
-    return this.html.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
+    return this.html.post<UserLogin>('https://geonarede.herokuapp.com/usuarios/logar', userLogin)
 
   }
 
   Cadastrar(usuario:Usuario):Observable<Usuario> { //model usuário
     
-    return this.html.post<Usuario>('http://localhost:8080/usuarios/cadastrar',usuario);//variável usuário
+    return this.html.post<Usuario>('https://geonarede.herokuapp.com/usuarios/cadastrar',usuario);//variável usuário
     //heroko
   }
 

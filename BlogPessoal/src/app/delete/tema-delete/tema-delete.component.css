@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&family=Contrail+One&family=Mukta:wght@300&display=swap');
+
+.fonte{
+    font-family: 'Azeret Mono', monospace;
+}
+
+.bg-color{
+    background: linear-gradient(65deg, #bfd6cf 0%, #9fcec8 100%);
+}

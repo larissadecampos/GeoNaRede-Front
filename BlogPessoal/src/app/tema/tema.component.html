@@ -15,10 +15,11 @@
             <div class="row d-flex justify-content-center fonte mt-4 mb-5">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <input type="text"  class="form-control fs-12" id="descricao" placeholder="Digite um novo tema aqui">
+                        <input [(ngModel)]="tema.descricao" type="text"  class="form-control fs-12" id="nome" placeholder="Digite o nome do novo tema">
+                        <input [(ngModel)]="tema.nome" type="text"  class="form-control fs-12" id="descricao" placeholder="Digite uma descrição">
                     </div>
                         <div class="d-flex justify-content-center fonte">
-                            <button class=" btn btn-success fonte">Cadastrar</button>
+                            <button class="btn btn-success fonte" (click)="cadastrar()">Cadastrar</button>
 
                         </div>
 
@@ -44,29 +45,19 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Descrição</th>
+                <th scope="col" class="text-right">Modificações</th>
+
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
+              <tr *ngFor='let item of listaTemas'>  
+                <th>{{item.id}}</th>
+                <td>{{item.descricao}}</td>
+                <td class="d-flex justify-content-end">
+                <button class="btn btn-success texto mr-3"[routerLink]="['/tema-edit',item.id]">Editar </button>
+                <button class="btn btn-danger texto" [routerLink]="['/tema-delete', item.id]">Apagar</button>
+              </tr>            
             </tbody>
           </table>
 

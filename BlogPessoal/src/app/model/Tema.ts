@@ -7,4 +7,6 @@ export class Tema{
     public descricao: string
 
     public postagem: Postagem[]
+
+    public nome: string
 }

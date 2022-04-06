@@ -15,6 +15,7 @@ export class Usuario{
     public tipo: string;
 
     public postagem: Postagem[]
-    //postagem: vai entrar depois que a gente criar a model postagem
+   
+   ///cl postagem: vai entrar depois que a gente criar a model postagem
 
 }

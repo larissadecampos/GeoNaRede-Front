@@ -27,6 +27,10 @@ export class AuthService {
     //heroko
   }
 
+ getByIdUser(id:number): Observable<Usuario> {
+    return this.html.get<Usuario>(`https://geonarede.herokuapp.com/usuarios/${id}`)
+  }
+
   logado(){
     let ok: boolean = false
 
@@ -37,5 +41,7 @@ export class AuthService {
 
     return ok
   }
+
+  
 
 }

@@ -7,6 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 //criando as rotas
@@ -25,7 +28,13 @@ const routes: Routes = [
 
   {path: 'tema-edit/:id', component:TemaEditComponent}, //parâmetro por rota
 
-  {path: 'tema-delete/:id', component: TemaDeleteComponent}
+  {path: 'tema-delete/:id', component: TemaDeleteComponent},
+
+  {path: 'postagem-edit/:id', component: PostagemEditComponent},
+
+  {path: 'postagem-delete/:id', component:PostagemDeleteComponent},
+
+  {path: 'user-edit/:id', component: UserEditComponent}
 
 ];
 

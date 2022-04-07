@@ -14,6 +14,7 @@
         <div class="col-md-6">
           <button type="submit" class="btn btn-success fonte h1" data-toggle="modal" data-target="#novaPostagem">Nova
             Postagem</button>
+            <div class="row"></div>
           <a class="btn btn-success fonte" href="#postagens">Ver Postagens</a>
         </div>
       </div>
@@ -50,17 +51,25 @@
 
     <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
 
+      <div class="row d-flex justify-content-center">
+        <div class="col col-md-4">
+          <div class="form-goup">
+            <input type="text" class="form-control" id="titulo" placeholder="Pesquise um título de postagem"
+              [(ngModel)]='tituloPost' (keyup)="findByTituloPostagem()">
+          </div>
+        </div>
+      </div>
+
       <!-- Card---->
 
       <div class="card-columns fonte">
-        <div class="card text-center" *ngFor='let item of listaPostagens'>
+        <div class="card text-center" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
             <p class="card-text mt-3">{{item.texto}}</p>
             <p class="card-text"><small class="text-muted">
-                {{item.data | date: 'dd/MM/yyyy'}}
-                <!--hora às {{item.data | date: 'HH:mm'}} -->
+                {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
               </small></p>
 
             <p class="card-text"><small class="text-muted">
@@ -77,14 +86,14 @@
     <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
 
       <div class="card-columns">
-        <div class="card text-center" *ngFor='let item of usuario.postagem'>
+        <div class="card text-center" *ngFor='let item of usuario.postagem | orderBy : key : reverse'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
             <p class="card-text mt-3">{{item.texto}}</p>
             <p class="card-text"><small class="text-muted">
                 {{item.data | date: 'dd/MM/yyyy'}}
-                <!-- às {{item.data | date: 'HH:mm'}}-->
+                às {{item.data | date: 'HH:mm'}}
               </small></p>
 
             <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3 fonte" href="">Editar</a>
@@ -100,14 +109,13 @@
 
 
       <div class="card-columns" *ngFor='let tema of listaTemas'>
-        <div class="card text-center" *ngFor='let item of tema.postagem'>
+        <div class="card text-center" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
           <div class="card-body">
             <h5 class="card-title m-0">{{item.titulo}}</h5>
             <p class="card-text mt-3">{{item.texto}}</p>
             <p class="card-text"><small class="text-muted">
-                {{item.data | date: 'dd/MM/yyyy'}}
-                <!---às 
-                {{item.data | date: 'HH:mm'}}-->
+                {{item.data | date: 'dd/MM/yyyy'}} às
+                {{item.data | date: 'HH:mm'}}
               </small></p>
 
             <p class="card-text"><small class="text-muted">

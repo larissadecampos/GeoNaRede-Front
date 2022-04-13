@@ -12,7 +12,7 @@ export class PostagemService {
   constructor(private http:HttpClient) { }
 
 token = {
-  headers:new HttpHeaders().set('Authorization', environment.token)
+  headers: new HttpHeaders().set('Authorization', environment.token)
 }
   
   getAllPostagens(): Observable<Postagem[]>{
@@ -24,7 +24,7 @@ token = {
   }
  
   getByTituloPostagem(titulo: string): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>(`https://geonarede.herokuapp.com/postagens/titulo${titulo}`,
+    return this.http.get<Postagem[]>(`https://geonarede.herokuapp.com/postagens/titulo/${titulo}`,
      this.token)
  }
 

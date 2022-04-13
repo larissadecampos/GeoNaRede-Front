@@ -8,8 +8,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
 
-
-
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
